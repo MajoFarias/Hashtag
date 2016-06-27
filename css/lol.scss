@@ -63,13 +63,16 @@ h1 {
 
 .button_container {
   position: fixed;
-  top: 7%;
-  right: 2%;
+  top: 5%;
+  right: 10%;
   height: $button-height;
   width: $button-width;
   cursor: pointer;
   z-index: 100;
   transition: opacity .25s ease;
+  @media (max-width:1200px){
+    right: 3%;
+  }
   
   &:hover {
     opacity: .7;
@@ -77,6 +80,7 @@ h1 {
   
   &.active {
     .top {
+      -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
       transform: translateY(11px) translateX(0) rotate(45deg);
       background: $color-active;
     }
@@ -86,6 +90,7 @@ h1 {
     }
     
     .bottom {
+      -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: $color-active;
     }
@@ -130,8 +135,11 @@ h1 {
     height: 100%;
     
     li {
+      -webkit-animation: fadeInRight .5s ease forwards;
       animation: fadeInRight .5s ease forwards;
       animation-delay: .35s;
+      -webkit-animation-delay: .35s;
+
       
       &:nth-of-type(2) {
         animation-delay: .4s;
@@ -142,14 +150,19 @@ h1 {
       &:nth-of-type(4) {
         animation-delay: .50s;
       }
+      &:nth-of-type(5) {
+        animation-delay: .55s;
+      }
+      &:nth-of-type(6) {
+        animation-delay: .60s;
+      }
     }
   }
   
   nav {
     position: relative;
     height: 70%;
-    top: 50%;
-    transform: translateY(-32%);
+    top: 30%;
     font-size: 22px;
     letter-spacing: 0.3px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -214,6 +227,17 @@ h1 {
 
 @keyframes fadeInRight {
   0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
     opacity: 0;
     left: 20%;
   }
