@@ -104,7 +104,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
+      <button type="button" data-title="Agencia" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
       Contáctanos
       </button>    
     </div>
@@ -146,7 +146,7 @@
           </div>
 
         </div>
-        <button type="button" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
+        <button type="button" data-title="Productora" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
         Contáctanos
         </button>
       </div>
@@ -191,7 +191,7 @@
       </div>
     </div>
 
-    <button type="button" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
+    <button type="button" data-title="Medios" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
   Contáctanos
     </button>
     
@@ -234,7 +234,7 @@
           </div>
         </div>
 
-        <button type="button" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
+        <button type="button" data-title="Influencer" class="btn btn-primary btn-lg contacto" data-toggle="modal" data-target="#myModal">
         Contáctanos
         </button>
       </div>
@@ -312,9 +312,9 @@ Delegación Miguel Hidalgo, México</p>
       <div class="modal-body">
         <h4>Hashtag</h4>
         <h3>Agencia</h3>
-          <form>
+          <form action="javascript:void(0);">
             <div class="form-group">
-            <input type="email" class="form-control" id="exampleInputNombre1" placeholder="Nombre">
+            <input type="text" class="form-control" id="exampleInputNombre1" placeholder="Nombre">
           </div>
           <div class="form-group">
             <input type="empresa" class="form-control" id="exampleInputEmpresa1" placeholder="Empresa">
@@ -323,12 +323,12 @@ Delegación Miguel Hidalgo, México</p>
             <input type="teléfono" class="form-control" id="teléfono1" placeholder="Teléfono">
           </div>
           <div class="form-group col-sm-6 no-padding">
-            <input type="Email" class="form-control" id="email1" placeholder="Email">
+            <input type="email" class="form-control" id="email1" placeholder="Email">
           </div>
           <div class="form-group red">
             <input type="Seccion" class="form-control red" id="seccion1" placeholder="Hashtag Agencia">
           </div>
-          <textarea class="form-control" rows="5" placeholder="Mensaje"></textarea>
+          <textarea class="form-control" rows="5" placeholder="Mensaje" id="mensaje"></textarea>
           
           <p><button type="submit" class="btn btn-default enviar">Enviar</button></p>
         </form>
@@ -341,8 +341,7 @@ Delegación Miguel Hidalgo, México</p>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="assets/js/jquery.easing.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
-
-
+<script src="assets/js/send_form.js"></script>
 <!--animaciónmenu-->
 <script>
 
