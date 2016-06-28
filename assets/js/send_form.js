@@ -27,9 +27,14 @@ $(document).ready(function() {
           type: 'POST',
           data: params,
           success: function (data) {
-            $('button.close').trigger('click');
-            alert('Gracias por tu mensaje');
-          }
+            if(true == data){
+              $('button.close').trigger('click'); $('form').reset();
+              alert('Gracias por tu mensaje. En breve nos comunicaremos contigo.');
+            }else{
+              alert('Todos los campos son obligatorios.');
+            }
+            $('form').children('p').children('button').html('ENVIAR');
+          }  
         });     
     });
 
